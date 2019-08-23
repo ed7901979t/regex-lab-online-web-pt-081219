@@ -46,14 +46,7 @@ def first_word_capitalized_and_ends_with_punctuation_2?(text)
   end
 end
 def valid_phone_number?(phone)
-  #phone.match(/([0-9] *?){10}|(\([0-9]{3}\)(([0-9]{3}-[0-9]{4})|[0-9]{7})\b)/) ? true : false
-  #three OR statements
-  #first: test to see if there are 9 numbers with an optional space 
-  #second: create two capture groups
-    #first capture group returns 3 numbers that are inside of parenthesis
-    #second capture group checks for 3 numbers followed by a dash, follwed by four numbers
-  #third: tests to see if there are 7 numbers in a row
-  #does the \( mean - any parenthesis, in the same way that \s means any white space
+   
   if phone.match(/([0-9] ?){10}/) || phone.match(/(\([0-9]{3}\)([0-9]{3}-[0-9]{4})\b)/) || phone.match(/\b([0-9]{7})\b/)
     true
   else
